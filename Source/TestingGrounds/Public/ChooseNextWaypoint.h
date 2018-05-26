@@ -7,7 +7,7 @@
 #include "ChooseNextWaypoint.generated.h"
 
 /**
- * 
+ * Used for guards to patrol along a specific array of targets
  */
 UCLASS()
 class TESTINGGROUNDS_API UChooseNextWaypoint : public UBTTaskNode
@@ -18,5 +18,8 @@ class TESTINGGROUNDS_API UChooseNextWaypoint : public UBTTaskNode
 	
 protected:
 	UPROPERTY(EditAnywhere, Category = "Blackboard")
-	struct FBlackboardKeySelector Index;
+	struct FBlackboardKeySelector IndexKey;
+
+	UPROPERTY(EditAnywhere, Category = "Blackboard")
+	struct FBlackboardKeySelector WaypointKey;
 };
