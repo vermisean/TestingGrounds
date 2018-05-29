@@ -25,6 +25,7 @@ public:
 	AGun();
 
 	/** Fires a projectile. */
+	UFUNCTION(BlueprintCallable, Category = "Shooting")
 	void OnFire();
 
 	// Called every frame
